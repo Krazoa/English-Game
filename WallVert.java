@@ -1,4 +1,4 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class WallVert here.
@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class WallVert extends Objects
+public class WallVert extends Static
 {
     /**
      * Act - do whatever the WallVert wants to do. This method is called whenever

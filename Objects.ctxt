@@ -1,5 +1,23 @@
 #BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Objects\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=1
+comment0.target=Objects
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Objects\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Objects\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ isTouchingVert()
+comment3.params=
+comment3.target=void\ isTouchingHoriz()
+comment4.params=
+comment4.target=boolean\ worldEdge()
+comment5.params=
+comment5.target=void\ touchingBrickWall()
+comment6.params=
+comment6.target=boolean\ touchingTriggerMainDoor()
+comment7.params=
+comment7.target=void\ intersectingRoad()
+comment8.params=
+comment8.target=boolean\ touchingPlantTrigger()
+comment9.params=
+comment9.target=void\ Control()
+numComments=10

@@ -1,4 +1,4 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class FloorBoard here.
@@ -6,7 +6,7 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class FloorBoard extends Objects
+public class FloorBoard extends Static
 {
     /**
      * Act - do whatever the FloorBoard wants to do. This method is called whenever
