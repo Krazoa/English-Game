@@ -24,7 +24,7 @@ public class mainDoor extends Static
 
         if(touchingTriggerMainDoor()== true)
         {
-            setLocation(getX() + 1, getY());
+            setLocation(getX() + 6, getY());
         }
         if(worldEdge() == true)
         {

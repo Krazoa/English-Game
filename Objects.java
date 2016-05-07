@@ -8,6 +8,7 @@ import greenfoot.*;
  */
 public class Objects extends Actor
 {
+        int Notebook_Open = 0;
     /**
      * Act - do whatever the Objects wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -26,11 +27,11 @@ public class Objects extends Actor
     {
         if(isTouching(WallVert.class) && Greenfoot.isKeyDown("Left")) //Is the character touching the wall from the right side
         {
-            setLocation(getX() + 8, getY()); // Then the X pos of the object will be set 10 pixels back of its position on the wall meaning the wall appears solid
+            setLocation(getX() + 15, getY()); // Then the X pos of the object will be set 10 pixels back of its position on the wall meaning the wall appears solid
         }	
         else if (isTouching(WallVert.class) && Greenfoot.isKeyDown("Right")) // Is the character touching the wall from the left side
         {
-            setLocation(getX() -8, getY()); //Then the X pos of the objectwill be set back 10 pixels from its position on the wall
+            setLocation(getX() -15, getY()); //Then the X pos of the objectwill be set back 10 pixels from its position on the wall
         }
     }
 
@@ -39,11 +40,11 @@ public class Objects extends Actor
         //Same procedure compared to above
         if(isTouching(WallHoriz.class) && Greenfoot.isKeyDown("Up")) 
         { 
-            setLocation(getX(), getY() +8); 
+            setLocation(getX(), getY() +15); 
         }	
         else if (isTouching(WallHoriz.class) && Greenfoot.isKeyDown("Down"))
         {
-            setLocation(getX(), getY() -8);
+            setLocation(getX(), getY() -15);
         }
     }
 
@@ -65,11 +66,11 @@ public class Objects extends Actor
     {
         if(isTouching(brickWall.class) && Greenfoot.isKeyDown("Left")) //Is the character touching the wall from the right side
         {
-            setLocation(getX() + 25, getY()); // Then the X pos of the object will be set 10 pixels back of its position on the wall meaning the wall appears solid
+            setLocation(getX() + 10, getY()); // Then the X pos of the object will be set 10 pixels back of its position on the wall meaning the wall appears solid
         }	
         else if (isTouching(brickWall.class) && Greenfoot.isKeyDown("Right")) // Is the character touching the wall from the left side
         {
-            setLocation(getX() -25, getY()); //Then the X pos of the objectwill be set back 10 pixels from its position on the wall
+            setLocation(getX() - 10, getY()); //Then the X pos of the objectwill be set back 10 pixels from its position on the wall
         }
     }
 

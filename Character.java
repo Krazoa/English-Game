@@ -10,7 +10,6 @@ public class Character extends Objects
 {
     int  mainDoorKey = 0;
     int Notebook_Status = 0;
-    int Notebook_Open = 0;
     /**
      * Act - do whatever the Character wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -27,16 +26,19 @@ public class Character extends Objects
         intersectRoad();
         touchingPlant();
         openUpstairsDoor();
+        instructions();
     }  
     public void Notepad()
     {
         //reinsert all this in movement
-        if(Greenfoot.isKeyDown("q") && Notebook_Open == 0)
+        if(Greenfoot.isKeyDown("q"))
         {
+            if(Notebook_Open == 0)
+            {
             Notebook_Open = 1;
             if(Notebook_Status == 0)
             {
-                Notebook_Status = 1;
+             Notebook_Status = 1;
             }
             if(Notebook_Status == 1)
             {
@@ -50,17 +52,20 @@ public class Character extends Objects
             {
                 Notebook_Status = 4;
             }
-            if(Notebook_Status == 4)
-            {
-                Notebook_Status = 5;
-            }
-            if(Notebook_Status == 5)
-            {
+               if(Notebook_Status == 4)
+               {
+                  Notebook_Status = 5;
+               }
+               if(Notebook_Status == 5)
+               {
                 
+               }
             }
         }
-        if(Greenfoot.isKeyDown("w") && Notebook_Open == 1)
+        if(Greenfoot.isKeyDown("w"))
         {
+            if(Notebook_Open == 1)
+            {
             Notebook_Open = 0;
             if(Notebook_Status == 0)
             {
@@ -86,6 +91,7 @@ public class Character extends Objects
             {
                 
             }
+           }
         }
     }
     public void IntersectWallVert()
@@ -123,7 +129,7 @@ public class Character extends Objects
         Actor key;
         key= getOneObjectAtOffset(0, 0, keyMainDoor.class);
 
-        if(key != null)
+        if(key != null && Greenfoot.isKeyDown("Space"))
         {
             World world;
             world = getWorld();
@@ -139,7 +145,6 @@ public class Character extends Objects
         world = getWorld();
         if(mainDoorKey <=0 && touchingTriggerMainDoor())
         {
-            world.showText("To open your notepad, press 'Q' and 'W' to close it. Your notes and objectives will be shown here.", 750, 20);
             setLocation(getX() , getY() + 20);
             // Greenfoot.playSound("error.wav");
         }
@@ -170,10 +175,23 @@ public class Character extends Objects
 
         if(world.getObjects(doorUnlock.class).isEmpty() == false && isTouching(doorUpstairs.class))
         {
-            setLocation(getX() + 10, getY());
+            world.showText("", 750, 20);
+            setLocation(getX() - 10, getY());
+            // Greenfoot.playSound("error.wav");
+        }
+        if(world.getObjects(doorUnlock.class).isEmpty() == false && isTouching(doorUpstairsInvert.class))
+        {
+            setLocation(getX() - 10, getY());
             // Greenfoot.playSound("error.wav");
         }
     }
-    
+    public void instructions()
+    {
+        World world;
+        world = getWorld();
+        
+        world.showText("To use your notepad press 'Q' to open it and 'W' to close it. Your notes and objectives will be shown there.", 530, 20);
+        world.showText("Press the spacebar to interact with objects in the house.", 530, 40);
+    }
 }
 

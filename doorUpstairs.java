@@ -24,7 +24,7 @@ public class doorUpstairs extends Static
 
         if(world.getObjects(doorUnlock.class).isEmpty() && isTouching(Character.class))
         {
-            setLocation(getX() - 6, getY());
+            setLocation(getX(), getY() + 6);
         }
 
     }
